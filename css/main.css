@@ -3,8 +3,8 @@
 
 /* =========Global Styles=========== */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
@@ -17,73 +17,179 @@ ul {
     list-style: none;
 }
 
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
+    width: 100%;
+    max-width: 1700px;
+    margin: auto;
     overflow: hidden;
+}
+
+
+/*=======Utility Classes =======*/
+
+.bold {
+    font-weight: 100;
+}
+
+.sup {
+    font-size: 0.5rem;
+}
+
+.dash,
+.set,
+.members,
+.visits {
+    width: 40px;
+}
+
+.divider {
+    height: 2rem;
+    border-left: 1px solid rgba(77, 76, 76, 0.986);
+    margin: 0 10px;
+}
+
+/*======== Grid Styles ===========*/
+.grid-container {
     display: grid;
+   
+    grid-template-columns: 100%;
     grid-template-rows: auto;
-    grid-template-columns: 1fr;
     grid-template-areas:
         "header"
-        "nav"
+        "navigation"
         "main";
 }
 
-header {
+.header {
     grid-area: header;
+}
+
+.navigation {
+    grid-area: navigation;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main { 
+    display: grid;
+}
+
+
+
+/*====== Header ======*/
+
+.header {
+    background: #7477BF;
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #4267B2;
-    color: #fff;
+    height: 79px;
+    width: 100%;
+    padding: 0.5rem;
 }
 
-header h1 {
-    margin-left: 1rem;
-    font-size: large;
+.header .notification-bell {
+    height: 20px;
+    transition: transform ease-in;
+
 }
 
-.header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.2rem 2.5rem;
+.notification-bell:hover {
+    cursor: pointer;
+    transform: rotate(10deg);
 }
 
-header .bell {
-    width: 1.5rem;
-}
-
-
-
-header .user-avatar .user {
-    width: 2rem;
-    height: 2rem;
+.header .user-img {
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
+}
+
+.header .logo {
     margin-left: 1.2rem;
+    font-size: 1.1rem
 }
 
-header .user-avatar .user-name {
-    font-size: 0.8rem;
-    margin-bottom: 2rem;
-    vertical-align: middle;
+.notification-area,
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* ======= Navigation ========= */
-
-nav {
-    grid-area: navigation;
-    
-    background: rgba(66, 103, 178, 0.842);
-    
+.profile {
+    width: 9.5rem;
 }
 
-nav .nav-link {
+.user-img,
+.user-name {
+    margin-right: 1.1rem;
+    display: inline-flex;
 
 }
 
-main {
-    grid-area: main;
+/*======= Navigation =======*/
+
+.nav {
+    background: rgb(52, 55, 148);
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 79px;
+}
+
+/*========== Main ========= */
+
+.main .title-and-search {
+    width: 23.4rem;
+    height: 8.75rem;
+    padding: 0.95rem;
+}
+
+.main .title {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    border-top-right-radius: 5px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+.search input {
+    width: 100%;
+    padding: 0.3rem;
+    margin-top: 2rem;
+
+    border: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header header"
+            "navigation main";
+    }
+
+    .main {
+        grid-template-columns: 50% ;
+     }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header header"
+            "navigation main main"
+    }
+
+
 }
