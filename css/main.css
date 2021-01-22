@@ -18,12 +18,7 @@ ul {
 }
 
 
-.container {
-    width: 100%;
-    max-width: 1700px;
-    margin: auto;
-    overflow: hidden;
-}
+
 
 
 /*=======Utility Classes =======*/
@@ -47,6 +42,16 @@ ul {
     height: 2rem;
     border-left: 1px solid rgba(77, 76, 76, 0.986);
     margin: 0 10px;
+}
+
+.active-line {
+    position: absolute;
+    top: -17.5px;
+    left: -6px;
+    height: 3px;
+    width: 53px;
+    background: #85E07C;
+    border-radius: 0 3px 3px 0;
 }
 
 /*======== Grid Styles ===========*/
@@ -73,9 +78,7 @@ ul {
     grid-area: main;
 }
 
-.main {
-    display: grid;
-}
+
 
 
 
@@ -135,65 +138,96 @@ ul {
 /*======= Navigation =======*/
 
 .nav {
-    background: rgb(52, 55, 148);
+    background: #4D4C72;
     color: #fff;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+
     height: 79px;
 }
 
-/*========== Main ========= */
-
-.main .title-and-search {
-    width: 23.4rem;
-    height: 8.75rem;
-    padding: 0.95rem;
-}
-
-.main .title {
+.links {
+    width: 100%;
     display: flex;
     align-items: center;
-    height: 70px;
-    border-top-right-radius: 5px;
-    background-color: #fff;
-    border-right: 1px solid #ddd;
+    justify-content: space-around;
 }
 
-.search input {
-    width: 100%;
-    padding: 0.3rem;
-    margin-top: 2rem;
-
-    border: 5px;
-    border: 1px solid #ddd;
-    outline: none;
+.nav-link {
+    position: relative;
 }
+
+.main {
+    display: grid;
+}
+
+
+/*========== Main ========= */
+
+
 
 @media (min-width: 768px) {
     .grid-container {
-        grid-template-columns: 55px 1fr;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.09fr 1.5fr;
         grid-template-areas:
             "header header"
             "navigation main";
     }
 
-    .main {
-        grid-template-columns: 50%;
-        grid-area: main;
+    .header {
+        grid-area: header;
     }
 
     .nav {
         grid-area: navigation;
+        height: 100%;
+        width: 4.7rem;
+        display: inline-block;
+    }
+
+    
+     .links {
+        display: block;
+        text-align: center;
+    }
+
+    .links .nav-link img {
+        padding-top: 2.3rem;
+    }
+
+    .active-line {
+        position: absolute;
+        top: 28px;
+        left: -1px;
+        height: 53px;
+        width: 3px;
+        background: #85E07C;
+        border-radius: 0 3px 3px 0;
+    }
+
+    .title-search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 
+    
+
+
+
 @media (min-width: 1024px) {
-    .grid-container {
-        grid-template-columns: 1fr;
+    grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.1fr 1.5fr;
         grid-template-areas:
             "header header"
-            "navigation main"
+            "navigation main";
     }
 
     .header {
@@ -206,6 +240,27 @@ ul {
 
     .nav {
         grid-area: navigation;
+        height: 100%;
+        width: 4.7rem;
+        display: inline-block;
     }
 
+    .links {
+        display: block;
+        text-align: center;
+    }
+
+    .links .nav-link img {
+        padding-top: 2.3rem;
+    }
+
+    .active-line {
+        position: absolute;
+        top: 28px;
+        left: -1px;
+        height: 53px;
+        width: 3px;
+        background: #85E07C;
+        border-radius: 0 3px 3px 0;
+    }
 }
