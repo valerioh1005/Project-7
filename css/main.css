@@ -17,7 +17,9 @@ ul {
     list-style: none;
 }
 
-
+input[type='text'] {
+    text-align: center;
+}
 
 
 
@@ -162,6 +164,42 @@ ul {
 
 
 /*========== Main ========= */
+.title-search {
+    padding: 1rem 0;
+}
+
+.title {
+    margin-left: 0.7rem;
+}
+
+.search {
+    display: flex;
+    position: relative;
+    padding: 0 1rem;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+    margin: auto 0;
+}
+
+.search input {
+    width: 100%;
+    font-weight: 600;
+    height: 45px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.traffic-header h3 {
+    margin: 0 0 15px 15px;
+}
+
+.traffic-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 
 
@@ -169,7 +207,7 @@ ul {
     .grid-container {
         display: grid;
         height: 100vh;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 80px 1fr;
         grid-template-rows: 0.09fr 1.5fr;
         grid-template-areas:
             "header header"
@@ -211,7 +249,7 @@ ul {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 1rem;
+       
     }
 
     .title {
@@ -232,14 +270,38 @@ ul {
         width: 100%;
         height: 70px;
         border-bottom: 1px solid #ddd;
+        background: #FBFBFB;
         margin: auto 0;
     }
 
     .search input {
-        width: 60%;
+        width: 40%;
         padding: 1rem;
+        margin-right: 1rem;
         border-radius: 20px;
         outline: rgb(145, 142, 142);
+    }
+
+    .traffic-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0.7rem;
+     
+    }
+
+    .traffic-header h3 {
+      padding-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .traffic-nav  {
+        display: flex;
+    }
+
+    .traffic-nav .traffic-nav-link {
+        padding: 0 1rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -250,8 +312,8 @@ ul {
 @media (min-width: 1024px) {
     grid-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 0.1fr 1.5fr;
+        grid-template-columns: 55px 1fr;
+        /* grid-template-rows: 0.1fr 1.5fr;*/
         grid-template-areas:
             "header header"
             "navigation main";
