@@ -21,6 +21,16 @@ input[type='text'] {
     text-align: center;
 }
 
+.social-image {
+    display: flex;
+    align-items: center;
+    background: #7377BF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+   
+}
 
 
 /*=======Utility Classes =======*/
@@ -55,6 +65,7 @@ input[type='text'] {
     background: #85E07C;
     border-radius: 0 3px 3px 0;
 }
+
 
 /*======== Grid Styles ===========*/
 .grid-container {
@@ -201,6 +212,23 @@ input[type='text'] {
     justify-content: space-evenly;
 }
 
+/*====== Alert Banner Mobile =====*/
+.alert-banner {
+    margin: 15px;
+    margin-bottom: 9px;
+    padding: 15px;
+    height: auto;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #fff;
+    background-color: #7377BF;
+}
+
+
+
 
 
 @media (min-width: 768px) {
@@ -216,6 +244,9 @@ input[type='text'] {
 
     .header {
         grid-area: header;
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
 
     .nav {
@@ -249,7 +280,7 @@ input[type='text'] {
         display: flex;
         align-items: center;
         justify-content: space-between;
-       
+
     }
 
     .title {
@@ -282,27 +313,116 @@ input[type='text'] {
         outline: rgb(145, 142, 142);
     }
 
+    /*====== Line Graph Styles =======*/
+    .traffic {
+        padding: 0 30px;
+    }
+
     .traffic-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 0 0.7rem;
-     
+
     }
 
     .traffic-header h3 {
-      padding-top: 1rem;
-      font-size: 1.5rem;
+        padding-top: 1rem;
+        font-size: 1.3rem;
     }
 
-    .traffic-nav  {
+    .traffic-nav {
         display: flex;
     }
 
     .traffic-nav .traffic-nav-link {
         padding: 0 1rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
+
+    /*============ Bar Chart =============*/
+    .daily-mobile-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 0.5fr));
+        padding: 0 1.1rem;
+        margin-top: 1rem;
+       
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        gap: 1.1rem;
+    }
+
+
+
+    .mobile {
+        border-left: 1px solid #ddd;
+    }
+
+    .daily h3,
+    .mobile h3 {
+        margin: 0.7rem 0 0 1rem;
+    }
+
+
+
+    /*====== Alert Banner =====*/
+    .alert {
+        margin: 1.7rem;
+        cursor: pointer;
+    }
+
+    .alert-banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #7377BF;
+        color: #fff;
+        padding: 0.5rem 3rem;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+
+    /* =========== Social Section =========== */
+    .social-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(291px, 0.5fr));
+        gap: 2rem;
+        padding: 2.5rem;
+    }
+
+    .social-card {
+        display: inline-flex;
+        align-items: center;
+        padding: 15px;
+        background-color: #FBFBFB;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .social-card .t-icon {
+        fill: #fff;
+    }
+
+    .social-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #7377BF;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin-right: 30px;
+    }
+
+    .social-text {
+        font-size: 1.4rem;
+    }
+
+    .social-text .social-title {
+        color: #7377BF;
+    }
+
+
 }
 
 
@@ -321,6 +441,7 @@ input[type='text'] {
 
     .header {
         grid-area: header;
+        position: sticky;
     }
 
     .main {
@@ -352,4 +473,5 @@ input[type='text'] {
         background: #85E07C;
         border-radius: 0 3px 3px 0;
     }
+
 }

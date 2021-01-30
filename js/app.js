@@ -2,6 +2,7 @@ const alertBanner = document.getElementById("alert");
 const trafficCanvas = document.getElementById("traffic-chart");
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-chart");
+const close = document.getElementsByClassName("alert-banner-close")
 
 //Create HTML for the banner
 alertBanner.innerHTML = `
@@ -14,9 +15,9 @@ to complete</p>
 alertBanner.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")) {
-        alert.style.display = 'none';
-    }
-})
+        alertBanner.style.display = 'none';
+    } 
+});
 
 //Object Literal for Traffic Data 
 
@@ -107,7 +108,9 @@ const mobileOptions = {
     legend: {
         position: 'right',
         labels: {
-            boxWidth: 20,
+            fontSize: 18,
+            boxWidth: 50,
+            padding: 30,
             fontStyle: 'bold'
         }
     }
