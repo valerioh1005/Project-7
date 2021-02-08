@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
         integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Web App Dashboard</title>
 </head>
@@ -109,7 +110,9 @@
             </div>
         </div>
         <!---------End Of Doughnut Chart-------->
+        <h3 class="social-heading">Social Stats</h3>
         <div class="social-container">
+
             <div class="social-card">
                 <div class="social-image">
                     <?xml version="1.0" encoding="utf-8"?>
@@ -177,10 +180,152 @@
                 </div>
             </div>
         </div>
-        <!-- add two more social containers and child
-            elements for other social media items -->
+
         </div>
         </div>
+        <!--------------Members Section-------------->
+        <section id="members-grid">
+            <div class="column-left">
+                <h3>New Members</h3>
+                <div class="members-container">
+                    <img src="./img/member-1.jpg" class="profile-image">
+                    <div class="members-text">
+                        <div class="text-details">
+                            <p>Victoria Hart</p>
+                            <a href="#">victoria.hart80@example.com</a>
+                        </div>
+                    </div>
+                    <div class="sub-text">
+                        <p>10/15/15</p>
+                    </div>
+
+                </div>
+
+                <div class="members-container">
+                    <img src="./img/member-2.jpg" class="profile-image">
+                    <div class="members-text">
+                        <p>Dimitry Lazlov</p>
+                        <a href="#">dimitry.lazlov80@example.com</a>
+                    </div>
+                    <div class="sub-text">
+                        <p>10/15/15</p>
+                    </div>
+                </div>
+                <div class="members-container">
+                    <img src="./img/member-3.jpg" class="profile-image">
+                    <div class="members-text">
+                        <p>Jenny Law</p>
+                        <a href="#">jenny.law80@example.com</a>
+                    </div>
+                    <div class="sub-text">
+                        <p>10/15/15</p>
+                    </div>
+                </div>
+                <div class="members-container">
+                    <img src="./img/member-4.jpg" class="profile-image">
+                    <div class="members-text">
+                        <p>Paul James</p>
+                        <a href="#">Paul.James80@example.com</a>
+                    </div>
+                    <div class="sub-text">
+                        <p>10/15/15</p>
+                    </div>
+                </div>
+                <!-- messaging widget -->
+                <div class="message">
+                    <h3>Message User</h3>
+                    <form class="user-form">
+                        <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                        <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+                        <button class="button-primary" id="send">Send</button>
+                    </form>
+                </div>
+                <!--End of messaging widget-->
+            </div>
+            <!--End Of Left Column-->
+
+            <!--Right Column-->
+            <div class="column-right">
+                <h3>Recent Activity</h3>
+                <div class="recent-container">
+                    <img src="./img/member-1.jpg" class="profile-image">
+                    <div class="members-text">
+                        <p>Victoria Chambers liked a photo </p>
+                        <span>4 hours ago</span>
+                    </div>
+                </div>
+                <div class="recent-container">
+                    <img src="./img/member-2.jpg" class="profile-image">
+                    <div class="members-text">
+                        <p>Victoria Chambers liked a photo </p>
+                        <span>4 hours ago</span>
+                    </div>
+                </div>
+                <div class="recent-container">
+                    <img src="./img/member-3.jpg" class="profile-image">
+                    <div class="members-text">
+                        <p>Victoria Chambers liked a photo </p>
+                        <span>4 hours ago</span>
+                    </div>
+                </div>
+                <div class="recent-container">
+                    <img src="./img/member-4.jpg" class="profile-image">
+                    <div class="members-text">
+                        <p>Victoria Chambers liked a photo </p>
+                        <span>4 hours ago</span>
+                    </div>
+                </div>
+                <!-- local settings widget -->
+                <div id="settings">
+                    <h3>Settings</h3>
+
+                    <div class="container">
+                        <div class="toggle-area">
+                            <div class="toggle">
+                                <label class="switch-light switch-material">
+                                    <input type="checkbox">
+
+                                    <p>Send Email Notification</p>
+
+                                    <span class="toggle-switch">
+                                        <span></span>
+                                        <span></span>
+                                        <a></a>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="toggle">
+                                <label class="switch-light switch-material">
+                                    <input type="checkbox">
+
+                                    <p>Set Profile To Public</p>
+
+                                    <span class="toggle-switch">
+                                        <span></span>
+                                        <span></span>
+                                        <a></a>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="timezone-container">
+                            <select class="dropdown" name="timezone" id="timezone">
+                                <option value="EST">Eastern Standard Time (EST)</option>
+                                <option value="CST">Central Standard Time (CST)</option>
+                                <option value="MST">Mountain Standard Time (MST)</option>
+                                <option value="PST">Pacific Standard Time (PST)</option>
+                            </select>
+                        </div>
+                        <div class="setting-buttons">
+                            <button class="purple-button">Save</button>
+                            <button class="gray-button">Cancel</button>
+                        </div>
+                    </div>
+
+                    <!--End of local settings widget-->
+                </div>
+                <!--End of right column-->
+        </section>
     </main>
 
 
