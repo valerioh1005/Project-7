@@ -115,6 +115,20 @@ canvas {
     padding: 0.5rem;
 }
 
+.notification-area {
+    position: relative;
+}
+
+.bell-alert {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #85E07C;
+    top: -3px;
+    left: 12px;
+}
+
 .header .notification-bell {
     height: 20px;
     transition: transform ease-in;
