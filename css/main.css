@@ -7,8 +7,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-
+    
 }
+
+
 
 a {
     text-decoration: none;
@@ -76,7 +78,7 @@ input[type='text'] {
     /*======== Grid Styles ===========*/
 .grid-container {
     display: grid;
-
+    
     grid-template-columns: 100%;
     grid-template-rows: auto;
     grid-template-areas:
@@ -592,6 +594,7 @@ canvas {
 @media (min-width: 768px) {
     .grid-container {
         display: grid;
+       
         height: 100vh;
         grid-template-columns: 80px 1fr;
         grid-template-rows: 0.09fr 1.5fr;
@@ -1060,6 +1063,7 @@ canvas {
 @media (min-width: 1280px) {
     grid-container {
         display: grid;
+       
         grid-template-columns: 55px 1fr;
         /* grid-template-rows: 0.1fr 1.5fr;*/
         grid-template-areas:
